@@ -38,7 +38,7 @@ class _HomePageState extends ConsumerState<HomePage> {
       FocusScope.of(context).unfocus();
 
       final model = GenerativeModel(
-          model: 'gemini-1.5-flash', apiKey: dotenv.env['GOOGLE_API_KEY']!);
+          model: 'gemini-1.5-flash', apiKey: dotenv.env['GOOGLE_API_KEY']!); // use this link to get api (https://aistudio.google.com/apikey)
 
       final content = [Content.text(prompt)];
       final response = await model.generateContent(content);
